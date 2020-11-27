@@ -14,11 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithAsset:(AVAsset *)asset;
 
-- (void)seekVideoToPos:(CGFloat)pos;
-
 - (void)play;
 
 - (void)pause;
+
+- (void)seekVideoToPos:(CGFloat)pos;
 
 - (void)setVideoFillMode:(NSString *)mode;
 

@@ -8,7 +8,7 @@
 #import "ViewController.h"
 #import "LJVideoTrimViewController.h"
 
-@interface ViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface ViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate,UIVideoEditorControllerDelegate>
 
 @end
 
@@ -34,9 +34,38 @@
         return;
     }
     
+    
     LJVideoTrimViewController *vc = [[LJVideoTrimViewController alloc] initWithAsset:asset];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     [self presentViewController:nav animated:YES completion:nil];
+}
+
+- (void)showUIVideoEditor:(PHAsset *)asset {
+    
+    if ([PHPhotoLibrary authorizationStatus] != PHAuthorizationStatusAuthorized) {
+        return;
+    }
+    
+    PHVideoRequestOptions *options = [[PHVideoRequestOptions alloc] init];
+    options.networkAccessAllowed = YES;
+    options.deliveryMode = PHVideoRequestOptionsDeliveryModeHighQualityFormat;
+    __weak typeof(self) weakSelf = self;
+    [[PHImageManager defaultManager] requestAVAssetForVideo:asset options:options resultHandler:^(AVAsset * _Nullable avasset, AVAudioMix * _Nullable audioMix, NSDictionary * _Nullable info) {
+       
+        if (!avasset) {
+            return;
+        }
+        AVURLAsset *urlAsset = (AVURLAsset *)avasset;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UIVideoEditorController *editorVC = [[UIVideoEditorController alloc] init];
+            editorVC.videoPath = urlAsset.URL.path;
+            editorVC.delegate = self;
+            [weakSelf presentViewController:editorVC animated:YES completion:nil];
+            
+        });
+    }];
+
+
 }
 
 #pragma mark - UIImagePickerControllerDelegate
@@ -54,7 +83,7 @@
     }
     
     [picker dismissViewControllerAnimated:YES completion:^{
-        [self showVideTrimer:asset];
+        [self showUIVideoEditor:asset];
     }];
     
 }
@@ -62,6 +91,19 @@
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
 
     [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - UIVideoEditorControllerDelegate
+- (void)videoEditorController:(UIVideoEditorController *)editor didSaveEditedVideoToPath:(NSString *)editedVideoPath {
+    
+}
+
+- (void)videoEditorController:(UIVideoEditorController *)editor didFailWithError:(NSError *)error {
+    
+}
+
+- (void)videoEditorControllerDidCancel:(UIVideoEditorController *)editor {
+    
 }
 
 @end

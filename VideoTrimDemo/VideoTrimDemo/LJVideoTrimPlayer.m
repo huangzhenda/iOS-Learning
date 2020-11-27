@@ -44,10 +44,6 @@
                                                  selector:@selector(playerItemDidReachEnd:)
                                                      name:AVPlayerItemDidPlayToEndTimeNotification
                                                    object:[self.player currentItem]];
-        
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapOnVideoLayer:)];
-        [self addGestureRecognizer:tap];
-
     }
     return self;
 }
@@ -74,8 +70,6 @@
     [(AVPlayerLayer *)[self layer] setVideoGravity:mode];
 }
 
-
-
 #pragma mark - Public Methods
 - (void)seekVideoToPos:(CGFloat)pos {
 
@@ -88,7 +82,6 @@
     
     self.isPlaying = YES;
     [self.player play];
-    
 }
 
 - (void)pause {
@@ -98,14 +91,10 @@
 
 #pragma mark - Private Methods
 - (void)playerItemDidReachEnd:(NSNotification *)notification {
-    
-    
+    AVPlayerItem *p = [notification object];
+    if (p == self.playerItem && self.isPlaying) {
+        [self.player seekToTime:kCMTimeZero];
+    }
 }
-
-- (void)tapOnVideoLayer:(id)sender {
-    
-}
-
-
 
 @end

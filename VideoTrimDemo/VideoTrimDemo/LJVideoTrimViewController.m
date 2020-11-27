@@ -46,9 +46,6 @@
     PHVideoRequestOptions *options = [[PHVideoRequestOptions alloc] init];
     options.networkAccessAllowed = YES;
     options.deliveryMode = PHVideoRequestOptionsDeliveryModeHighQualityFormat;
-    options.progressHandler = ^(double progress, NSError * _Nullable error, BOOL * _Nonnull stop, NSDictionary * _Nullable info) {
-        
-    };
     __weak typeof(self) weakSelf = self;
     [[PHImageManager defaultManager] requestAVAssetForVideo:self.asset options:options resultHandler:^(AVAsset * _Nullable asset, AVAudioMix * _Nullable audioMix, NSDictionary * _Nullable info) {
        
@@ -83,7 +80,7 @@
 
 - (void)setupSubviews {
     
-    self.player = [[LJVideoTrimPlayer alloc] initWithAsset:self.asset];
+    self.player = [[LJVideoTrimPlayer alloc] initWithAsset:self.avAsset];
     [self.view addSubview:self.player];
     self.player.frame = [self initTrimingPlayerFrame];
 
