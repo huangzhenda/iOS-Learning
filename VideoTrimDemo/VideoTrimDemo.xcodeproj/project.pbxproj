@@ -1,0 +1,754 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		488280CA670389C4183B26E5 /* Pods_VideoTrimDemo_VideoTrimDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7D489CF2508B68607148C2 /* Pods_VideoTrimDemo_VideoTrimDemoUITests.framework */; };
+		82EF1F139F458AD090F51491 /* Pods_VideoTrimDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01345DDC75D79633AA1E2E7A /* Pods_VideoTrimDemo.framework */; };
+		DDCA4C2C256B6427003682DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCA4C2B256B6427003682DA /* AppDelegate.m */; };
+		DDCA4C2F256B6427003682DA /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCA4C2E256B6427003682DA /* SceneDelegate.m */; };
+		DDCA4C32256B6427003682DA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCA4C31256B6427003682DA /* ViewController.m */; };
+		DDCA4C35256B6427003682DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDCA4C33256B6427003682DA /* Main.storyboard */; };
+		DDCA4C37256B6428003682DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDCA4C36256B6428003682DA /* Assets.xcassets */; };
+		DDCA4C3A256B6428003682DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDCA4C38256B6428003682DA /* LaunchScreen.storyboard */; };
+		DDCA4C3D256B6428003682DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCA4C3C256B6428003682DA /* main.m */; };
+		DDCA4C47256B6428003682DA /* VideoTrimDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCA4C46256B6428003682DA /* VideoTrimDemoTests.m */; };
+		DDCA4C52256B6428003682DA /* VideoTrimDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCA4C51256B6428003682DA /* VideoTrimDemoUITests.m */; };
+		DDCA4C64256B6456003682DA /* LJVideoTrimViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCA4C63256B6456003682DA /* LJVideoTrimViewController.m */; };
+		DDCA4C6A256B686E003682DA /* LJVideoTrimPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCA4C69256B686E003682DA /* LJVideoTrimPlayer.m */; };
+		F34FED637ABD3E122C71DE3F /* Pods_VideoTrimDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38FCB130921419D409AEF37 /* Pods_VideoTrimDemoTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DDCA4C43256B6428003682DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDCA4C1F256B6427003682DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDCA4C26256B6427003682DA;
+			remoteInfo = VideoTrimDemo;
+		};
+		DDCA4C4E256B6428003682DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDCA4C1F256B6427003682DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDCA4C26256B6427003682DA;
+			remoteInfo = VideoTrimDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00671B0A449882410F6282CD /* Pods-VideoTrimDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoTrimDemoTests.release.xcconfig"; path = "Target Support Files/Pods-VideoTrimDemoTests/Pods-VideoTrimDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		01345DDC75D79633AA1E2E7A /* Pods_VideoTrimDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoTrimDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18B1D1C2B0890961C7A19F50 /* Pods-VideoTrimDemo-VideoTrimDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoTrimDemo-VideoTrimDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-VideoTrimDemo-VideoTrimDemoUITests/Pods-VideoTrimDemo-VideoTrimDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		969CF538D85BE196E96A5E65 /* Pods-VideoTrimDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoTrimDemo.release.xcconfig"; path = "Target Support Files/Pods-VideoTrimDemo/Pods-VideoTrimDemo.release.xcconfig"; sourceTree = "<group>"; };
+		A326B35AD5B31699D33F7627 /* Pods-VideoTrimDemo-VideoTrimDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoTrimDemo-VideoTrimDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-VideoTrimDemo-VideoTrimDemoUITests/Pods-VideoTrimDemo-VideoTrimDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B38FCB130921419D409AEF37 /* Pods_VideoTrimDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoTrimDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDCA4C27256B6427003682DA /* VideoTrimDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoTrimDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDCA4C2A256B6427003682DA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DDCA4C2B256B6427003682DA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DDCA4C2D256B6427003682DA /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		DDCA4C2E256B6427003682DA /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		DDCA4C30256B6427003682DA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DDCA4C31256B6427003682DA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DDCA4C34256B6427003682DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DDCA4C36256B6428003682DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DDCA4C39256B6428003682DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DDCA4C3B256B6428003682DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDCA4C3C256B6428003682DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DDCA4C42256B6428003682DA /* VideoTrimDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoTrimDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDCA4C46256B6428003682DA /* VideoTrimDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoTrimDemoTests.m; sourceTree = "<group>"; };
+		DDCA4C48256B6428003682DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDCA4C4D256B6428003682DA /* VideoTrimDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoTrimDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDCA4C51256B6428003682DA /* VideoTrimDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoTrimDemoUITests.m; sourceTree = "<group>"; };
+		DDCA4C53256B6428003682DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDCA4C62256B6456003682DA /* LJVideoTrimViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LJVideoTrimViewController.h; sourceTree = "<group>"; };
+		DDCA4C63256B6456003682DA /* LJVideoTrimViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LJVideoTrimViewController.m; sourceTree = "<group>"; };
+		DDCA4C68256B686E003682DA /* LJVideoTrimPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LJVideoTrimPlayer.h; sourceTree = "<group>"; };
+		DDCA4C69256B686E003682DA /* LJVideoTrimPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LJVideoTrimPlayer.m; sourceTree = "<group>"; };
+		EA7D489CF2508B68607148C2 /* Pods_VideoTrimDemo_VideoTrimDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoTrimDemo_VideoTrimDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAB612DC5B6488953D0B3287 /* Pods-VideoTrimDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoTrimDemo.debug.xcconfig"; path = "Target Support Files/Pods-VideoTrimDemo/Pods-VideoTrimDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		F788A92DCB0ACDD0178ECD85 /* Pods-VideoTrimDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoTrimDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-VideoTrimDemoTests/Pods-VideoTrimDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DDCA4C24256B6427003682DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82EF1F139F458AD090F51491 /* Pods_VideoTrimDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDCA4C3F256B6428003682DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F34FED637ABD3E122C71DE3F /* Pods_VideoTrimDemoTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDCA4C4A256B6428003682DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				488280CA670389C4183B26E5 /* Pods_VideoTrimDemo_VideoTrimDemoUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		369F9F7DB49D3CFA49D282CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01345DDC75D79633AA1E2E7A /* Pods_VideoTrimDemo.framework */,
+				EA7D489CF2508B68607148C2 /* Pods_VideoTrimDemo_VideoTrimDemoUITests.framework */,
+				B38FCB130921419D409AEF37 /* Pods_VideoTrimDemoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDCA4C1E256B6427003682DA = {
+			isa = PBXGroup;
+			children = (
+				DDCA4C29256B6427003682DA /* VideoTrimDemo */,
+				DDCA4C45256B6428003682DA /* VideoTrimDemoTests */,
+				DDCA4C50256B6428003682DA /* VideoTrimDemoUITests */,
+				DDCA4C28256B6427003682DA /* Products */,
+				E9C3FACD68B375C03AD19585 /* Pods */,
+				369F9F7DB49D3CFA49D282CF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DDCA4C28256B6427003682DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DDCA4C27256B6427003682DA /* VideoTrimDemo.app */,
+				DDCA4C42256B6428003682DA /* VideoTrimDemoTests.xctest */,
+				DDCA4C4D256B6428003682DA /* VideoTrimDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DDCA4C29256B6427003682DA /* VideoTrimDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DDCA4C2A256B6427003682DA /* AppDelegate.h */,
+				DDCA4C2B256B6427003682DA /* AppDelegate.m */,
+				DDCA4C2D256B6427003682DA /* SceneDelegate.h */,
+				DDCA4C2E256B6427003682DA /* SceneDelegate.m */,
+				DDCA4C62256B6456003682DA /* LJVideoTrimViewController.h */,
+				DDCA4C63256B6456003682DA /* LJVideoTrimViewController.m */,
+				DDCA4C68256B686E003682DA /* LJVideoTrimPlayer.h */,
+				DDCA4C69256B686E003682DA /* LJVideoTrimPlayer.m */,
+				DDCA4C30256B6427003682DA /* ViewController.h */,
+				DDCA4C31256B6427003682DA /* ViewController.m */,
+				DDCA4C33256B6427003682DA /* Main.storyboard */,
+				DDCA4C36256B6428003682DA /* Assets.xcassets */,
+				DDCA4C38256B6428003682DA /* LaunchScreen.storyboard */,
+				DDCA4C3B256B6428003682DA /* Info.plist */,
+				DDCA4C3C256B6428003682DA /* main.m */,
+			);
+			path = VideoTrimDemo;
+			sourceTree = "<group>";
+		};
+		DDCA4C45256B6428003682DA /* VideoTrimDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				DDCA4C46256B6428003682DA /* VideoTrimDemoTests.m */,
+				DDCA4C48256B6428003682DA /* Info.plist */,
+			);
+			path = VideoTrimDemoTests;
+			sourceTree = "<group>";
+		};
+		DDCA4C50256B6428003682DA /* VideoTrimDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DDCA4C51256B6428003682DA /* VideoTrimDemoUITests.m */,
+				DDCA4C53256B6428003682DA /* Info.plist */,
+			);
+			path = VideoTrimDemoUITests;
+			sourceTree = "<group>";
+		};
+		E9C3FACD68B375C03AD19585 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EAB612DC5B6488953D0B3287 /* Pods-VideoTrimDemo.debug.xcconfig */,
+				969CF538D85BE196E96A5E65 /* Pods-VideoTrimDemo.release.xcconfig */,
+				18B1D1C2B0890961C7A19F50 /* Pods-VideoTrimDemo-VideoTrimDemoUITests.debug.xcconfig */,
+				A326B35AD5B31699D33F7627 /* Pods-VideoTrimDemo-VideoTrimDemoUITests.release.xcconfig */,
+				F788A92DCB0ACDD0178ECD85 /* Pods-VideoTrimDemoTests.debug.xcconfig */,
+				00671B0A449882410F6282CD /* Pods-VideoTrimDemoTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DDCA4C26256B6427003682DA /* VideoTrimDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDCA4C56256B6428003682DA /* Build configuration list for PBXNativeTarget "VideoTrimDemo" */;
+			buildPhases = (
+				5A9857530A7362DD32008FDA /* [CP] Check Pods Manifest.lock */,
+				DDCA4C23256B6427003682DA /* Sources */,
+				DDCA4C24256B6427003682DA /* Frameworks */,
+				DDCA4C25256B6427003682DA /* Resources */,
+				3D01A88E20C62830182A5E04 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VideoTrimDemo;
+			productName = VideoTrimDemo;
+			productReference = DDCA4C27256B6427003682DA /* VideoTrimDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DDCA4C41256B6428003682DA /* VideoTrimDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDCA4C59256B6428003682DA /* Build configuration list for PBXNativeTarget "VideoTrimDemoTests" */;
+			buildPhases = (
+				EF1FC58690115F3692944284 /* [CP] Check Pods Manifest.lock */,
+				DDCA4C3E256B6428003682DA /* Sources */,
+				DDCA4C3F256B6428003682DA /* Frameworks */,
+				DDCA4C40256B6428003682DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DDCA4C44256B6428003682DA /* PBXTargetDependency */,
+			);
+			name = VideoTrimDemoTests;
+			productName = VideoTrimDemoTests;
+			productReference = DDCA4C42256B6428003682DA /* VideoTrimDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DDCA4C4C256B6428003682DA /* VideoTrimDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDCA4C5C256B6428003682DA /* Build configuration list for PBXNativeTarget "VideoTrimDemoUITests" */;
+			buildPhases = (
+				4B739284A83025B70F8EA271 /* [CP] Check Pods Manifest.lock */,
+				DDCA4C49256B6428003682DA /* Sources */,
+				DDCA4C4A256B6428003682DA /* Frameworks */,
+				DDCA4C4B256B6428003682DA /* Resources */,
+				103456FB0C31B9E232E01886 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DDCA4C4F256B6428003682DA /* PBXTargetDependency */,
+			);
+			name = VideoTrimDemoUITests;
+			productName = VideoTrimDemoUITests;
+			productReference = DDCA4C4D256B6428003682DA /* VideoTrimDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DDCA4C1F256B6427003682DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					DDCA4C26256B6427003682DA = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					DDCA4C41256B6428003682DA = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = DDCA4C26256B6427003682DA;
+					};
+					DDCA4C4C256B6428003682DA = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = DDCA4C26256B6427003682DA;
+					};
+				};
+			};
+			buildConfigurationList = DDCA4C22256B6427003682DA /* Build configuration list for PBXProject "VideoTrimDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DDCA4C1E256B6427003682DA;
+			productRefGroup = DDCA4C28256B6427003682DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DDCA4C26256B6427003682DA /* VideoTrimDemo */,
+				DDCA4C41256B6428003682DA /* VideoTrimDemoTests */,
+				DDCA4C4C256B6428003682DA /* VideoTrimDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DDCA4C25256B6427003682DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDCA4C3A256B6428003682DA /* LaunchScreen.storyboard in Resources */,
+				DDCA4C37256B6428003682DA /* Assets.xcassets in Resources */,
+				DDCA4C35256B6427003682DA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDCA4C40256B6428003682DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDCA4C4B256B6428003682DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		103456FB0C31B9E232E01886 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VideoTrimDemo-VideoTrimDemoUITests/Pods-VideoTrimDemo-VideoTrimDemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VideoTrimDemo-VideoTrimDemoUITests/Pods-VideoTrimDemo-VideoTrimDemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VideoTrimDemo-VideoTrimDemoUITests/Pods-VideoTrimDemo-VideoTrimDemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D01A88E20C62830182A5E04 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VideoTrimDemo/Pods-VideoTrimDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VideoTrimDemo/Pods-VideoTrimDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VideoTrimDemo/Pods-VideoTrimDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B739284A83025B70F8EA271 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VideoTrimDemo-VideoTrimDemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A9857530A7362DD32008FDA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VideoTrimDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF1FC58690115F3692944284 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VideoTrimDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DDCA4C23256B6427003682DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDCA4C6A256B686E003682DA /* LJVideoTrimPlayer.m in Sources */,
+				DDCA4C32256B6427003682DA /* ViewController.m in Sources */,
+				DDCA4C2C256B6427003682DA /* AppDelegate.m in Sources */,
+				DDCA4C3D256B6428003682DA /* main.m in Sources */,
+				DDCA4C2F256B6427003682DA /* SceneDelegate.m in Sources */,
+				DDCA4C64256B6456003682DA /* LJVideoTrimViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDCA4C3E256B6428003682DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDCA4C47256B6428003682DA /* VideoTrimDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDCA4C49256B6428003682DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDCA4C52256B6428003682DA /* VideoTrimDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DDCA4C44256B6428003682DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDCA4C26256B6427003682DA /* VideoTrimDemo */;
+			targetProxy = DDCA4C43256B6428003682DA /* PBXContainerItemProxy */;
+		};
+		DDCA4C4F256B6428003682DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDCA4C26256B6427003682DA /* VideoTrimDemo */;
+			targetProxy = DDCA4C4E256B6428003682DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DDCA4C33256B6427003682DA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDCA4C34256B6427003682DA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DDCA4C38256B6428003682DA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDCA4C39256B6428003682DA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DDCA4C54256B6428003682DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DDCA4C55256B6428003682DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DDCA4C57256B6428003682DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAB612DC5B6488953D0B3287 /* Pods-VideoTrimDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VideoTrimDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.VideoTrimDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DDCA4C58256B6428003682DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 969CF538D85BE196E96A5E65 /* Pods-VideoTrimDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VideoTrimDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.VideoTrimDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DDCA4C5A256B6428003682DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F788A92DCB0ACDD0178ECD85 /* Pods-VideoTrimDemoTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VideoTrimDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.VideoTrimDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VideoTrimDemo.app/VideoTrimDemo";
+			};
+			name = Debug;
+		};
+		DDCA4C5B256B6428003682DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00671B0A449882410F6282CD /* Pods-VideoTrimDemoTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VideoTrimDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.VideoTrimDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VideoTrimDemo.app/VideoTrimDemo";
+			};
+			name = Release;
+		};
+		DDCA4C5D256B6428003682DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18B1D1C2B0890961C7A19F50 /* Pods-VideoTrimDemo-VideoTrimDemoUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VideoTrimDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.VideoTrimDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VideoTrimDemo;
+			};
+			name = Debug;
+		};
+		DDCA4C5E256B6428003682DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A326B35AD5B31699D33F7627 /* Pods-VideoTrimDemo-VideoTrimDemoUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VideoTrimDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.VideoTrimDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VideoTrimDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DDCA4C22256B6427003682DA /* Build configuration list for PBXProject "VideoTrimDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDCA4C54256B6428003682DA /* Debug */,
+				DDCA4C55256B6428003682DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDCA4C56256B6428003682DA /* Build configuration list for PBXNativeTarget "VideoTrimDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDCA4C57256B6428003682DA /* Debug */,
+				DDCA4C58256B6428003682DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDCA4C59256B6428003682DA /* Build configuration list for PBXNativeTarget "VideoTrimDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDCA4C5A256B6428003682DA /* Debug */,
+				DDCA4C5B256B6428003682DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDCA4C5C256B6428003682DA /* Build configuration list for PBXNativeTarget "VideoTrimDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDCA4C5D256B6428003682DA /* Debug */,
+				DDCA4C5E256B6428003682DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DDCA4C1F256B6427003682DA /* Project object */;
+}

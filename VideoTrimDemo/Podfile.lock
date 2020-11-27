@@ -1,0 +1,16 @@
+PODS:
+  - ICGVideoTrimmer (1.1)
+
+DEPENDENCIES:
+  - ICGVideoTrimmer
+
+SPEC REPOS:
+  trunk:
+    - ICGVideoTrimmer
+
+SPEC CHECKSUMS:
+  ICGVideoTrimmer: 1f54de0595af56af2a406f20cdb33c1c440d15cd
+
+PODFILE CHECKSUM: 248ee37556e56e045dea90bc34456838f1813f0c
+
+COCOAPODS: 1.10.0
