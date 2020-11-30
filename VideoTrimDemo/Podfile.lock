@@ -1,16 +1,24 @@
 PODS:
   - ICGVideoTrimmer (1.1)
+  - Masonry (1.1.0)
+  - ReactiveObjC (3.1.1)
 
 DEPENDENCIES:
   - ICGVideoTrimmer
+  - Masonry
+  - ReactiveObjC
 
 SPEC REPOS:
   trunk:
     - ICGVideoTrimmer
+    - Masonry
+    - ReactiveObjC
 
 SPEC CHECKSUMS:
   ICGVideoTrimmer: 1f54de0595af56af2a406f20cdb33c1c440d15cd
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
 
-PODFILE CHECKSUM: 248ee37556e56e045dea90bc34456838f1813f0c
+PODFILE CHECKSUM: 02b9a807980dce03ee909e7e74d3f3f93001a66d
 
 COCOAPODS: 1.10.0

@@ -7,6 +7,8 @@ target 'VideoTrimDemo' do
 
   # Pods for VideoTrimDemo
 	pod 'ICGVideoTrimmer'
+  pod 'Masonry'
+  pod 'ReactiveObjC'
 
   target 'VideoTrimDemoTests' do
     inherit! :search_paths

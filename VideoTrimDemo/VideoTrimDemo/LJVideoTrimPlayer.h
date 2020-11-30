@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LJVideoTrimPlayer : UIView
 
+///  播放进度回调
+@property (nonatomic, copy) void(^ __nullable periodicTimeObserverBlock) (double currentDuration, double totoalDuration);
+
+@property (nonatomic, assign) NSTimeInterval startTime;
+@property (nonatomic, assign) NSTimeInterval endTime;
+
 - (instancetype)initWithAsset:(AVAsset *)asset;
 
 - (void)play;

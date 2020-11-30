@@ -7,6 +7,8 @@
 
 #import "LJVideoTrimPlayer.h"
 #import <AVFoundation/AVFoundation.h>
+#import <Masonry/Masonry.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 
 @interface LJVideoTrimPlayer ()
 
@@ -15,6 +17,8 @@
 @property (nonatomic, strong) AVPlayerLayer *playerLayer;
 @property (nonatomic, assign) CGFloat videoPlaybackPosition;
 @property (nonatomic, assign) BOOL isPlaying;
+@property (nonatomic, strong) UIButton *playButton;
+@property (nonatomic, strong) id timeObserver;
 
 @end
 
@@ -24,6 +28,11 @@
     
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     
+    if (self.timeObserver) {
+        [self.player removeTimeObserver:self.timeObserver];
+        self.timeObserver = nil;
+    }
+
     if (self.player) {
         [self.player pause];
         [self.player replaceCurrentItemWithPlayerItem:nil];
@@ -39,11 +48,51 @@
         AVPlayerItem *item = [AVPlayerItem playerItemWithAsset:asset];
         self.player = [AVPlayer playerWithPlayerItem:item];
         self.player.actionAtItemEnd = AVPlayerActionAtItemEndNone;
+        self.startTime = 0;
+        self.endTime = CMTimeGetSeconds(item.duration);
 
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(playerItemDidReachEnd:)
                                                      name:AVPlayerItemDidPlayToEndTimeNotification
                                                    object:[self.player currentItem]];
+        
+        __weak typeof(self) weakSelf = self;
+        self.timeObserver = [self.player addPeriodicTimeObserverForInterval:CMTimeMake(1, item.currentTime.timescale) queue:dispatch_get_main_queue() usingBlock:^(CMTime time) {
+            
+            double currentDuration = CMTimeGetSeconds(time);
+            weakSelf.videoPlaybackPosition = currentDuration;
+            if (weakSelf.periodicTimeObserverBlock) {
+                weakSelf.periodicTimeObserverBlock(currentDuration, CMTimeGetSeconds(item.duration));
+            }
+            
+            if (currentDuration >= weakSelf.endTime) {
+                [weakSelf seekVideoToPos:weakSelf.startTime];
+            }
+
+        }];
+
+    }
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    
+    self = [super initWithFrame:frame];
+    if (self) {
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapOnVideoLayer:)];
+        [self addGestureRecognizer:tap];
+
+        self.playButton = [[UIButton alloc] init];
+        [self.playButton addTarget:self action:@selector(playButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        [self.playButton setBackgroundImage:[UIImage imageNamed:@"btn_video_play"] forState:UIControlStateNormal];
+        [self addSubview:self.playButton];
+        [self.playButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.size.mas_equalTo(CGSizeMake(45,45));
+            make.center.equalTo(self);
+        }];
+        
+        RAC(self.playButton,hidden) = RACObserve(self, isPlaying);
     }
     return self;
 }
@@ -93,7 +142,26 @@
 - (void)playerItemDidReachEnd:(NSNotification *)notification {
     AVPlayerItem *p = [notification object];
     if (p == self.playerItem && self.isPlaying) {
-        [self.player seekToTime:kCMTimeZero];
+        CMTime time = CMTimeMakeWithSeconds(self.startTime, self.player.currentTime.timescale);
+        [self.player seekToTime:time];
+    }
+}
+
+- (void)playButtonAction:(id)sender {
+    
+    if (!self.isPlaying) {
+        [self play];
+    }else{
+        [self pause];
+    }
+}
+
+- (void)tapOnVideoLayer:(UITapGestureRecognizer *)tap {
+
+    if (self.isPlaying) {
+        [self pause];
+    }else{
+        [self play];
     }
 }
 

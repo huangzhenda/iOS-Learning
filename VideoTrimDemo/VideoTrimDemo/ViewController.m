@@ -36,7 +36,10 @@
     
     
     LJVideoTrimViewController *vc = [[LJVideoTrimViewController alloc] initWithAsset:asset];
+    vc.videoMaxDuration = 29;
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    nav.navigationBar.translucent = NO;
+    nav.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:nav animated:YES completion:nil];
 }
 
@@ -83,7 +86,7 @@
     }
     
     [picker dismissViewControllerAnimated:YES completion:^{
-        [self showUIVideoEditor:asset];
+        [self showVideTrimer:asset];
     }];
     
 }
@@ -95,6 +98,12 @@
 
 #pragma mark - UIVideoEditorControllerDelegate
 - (void)videoEditorController:(UIVideoEditorController *)editor didSaveEditedVideoToPath:(NSString *)editedVideoPath {
+    
+    PHFetchResult *result = [PHAsset fetchAssetsWithALAssetURLs:@[[NSURL fileURLWithPath:editedVideoPath]] options:nil];
+    if (result.count > 0) {
+
+    }
+    [editor dismissViewControllerAnimated:YES completion:nil];
     
 }
 

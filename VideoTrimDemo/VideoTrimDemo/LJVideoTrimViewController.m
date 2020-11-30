@@ -8,6 +8,8 @@
 #import "LJVideoTrimViewController.h"
 #import "LJVideoTrimPlayer.h"
 #import <ICGVideoTrimmer/ICGVideoTrimmer.h>
+#import <Masonry/Masonry.h>
+
 
 @interface LJVideoTrimViewController () <ICGVideoTrimmerDelegate>
 
@@ -17,9 +19,6 @@
 @property (nonatomic, strong) UIButton *confirmBtn;
 @property (nonatomic, strong) LJVideoTrimPlayer *player;
 @property (nonatomic, strong) ICGVideoTrimmerView *trimmerView;
-
-@property (nonatomic, assign) NSTimeInterval startTime;
-@property (nonatomic, assign) NSTimeInterval stopTime;
 
 @end
 
@@ -46,6 +45,10 @@
     PHVideoRequestOptions *options = [[PHVideoRequestOptions alloc] init];
     options.networkAccessAllowed = YES;
     options.deliveryMode = PHVideoRequestOptionsDeliveryModeHighQualityFormat;
+    options.progressHandler = ^(double progress, NSError * _Nullable error, BOOL * _Nonnull stop, NSDictionary * _Nullable info) {
+        NSLog(@"progress: %f", progress);
+    };
+    
     __weak typeof(self) weakSelf = self;
     [[PHImageManager defaultManager] requestAVAssetForVideo:self.asset options:options resultHandler:^(AVAsset * _Nullable asset, AVAudioMix * _Nullable audioMix, NSDictionary * _Nullable info) {
        
@@ -58,6 +61,13 @@
             [weakSelf setupSubviews];
         });
     }];
+}
+
+- (void)viewDidLayoutSubviews {
+    
+    [super viewDidLayoutSubviews];
+    
+//    [self.trimmerView resetSubviews];
 }
 
 #pragma mark - UI
@@ -80,15 +90,28 @@
 
 - (void)setupSubviews {
     
+    __weak typeof(self) weakSelf = self;
     self.player = [[LJVideoTrimPlayer alloc] initWithAsset:self.avAsset];
+    [self.player setPeriodicTimeObserverBlock:^(double currentDuration, double totoalDuration) {
+        if (totoalDuration > 0) {
+            [weakSelf.trimmerView seekToTime:currentDuration];
+        }
+    }];
     [self.view addSubview:self.player];
     self.player.frame = [self initTrimingPlayerFrame];
-
-    CGRect frame = CGRectMake(0, CGRectGetHeight(self.view.frame) - 90, CGRectGetWidth(self.view.frame), 90);
+    self.player.endTime = self.videoMaxDuration;
+    
+    CGRect frame = CGRectMake(20, CGRectGetHeight(self.view.frame) - 90, CGRectGetWidth(self.view.frame) - 40, 90);
     self.trimmerView = [[ICGVideoTrimmerView alloc] initWithFrame:frame asset:self.avAsset];
     self.trimmerView.delegate = self;
+    self.trimmerView.maxLength = self.videoMaxDuration;
+    self.trimmerView.showsRulerView = YES;
+    self.trimmerView.themeColor = [UIColor whiteColor];
+    self.trimmerView.leftThumbImage = [UIImage imageNamed:@"btn_cutvideo_left"];
+    self.trimmerView.rightThumbImage = [UIImage imageNamed:@"btn_cutvideo_right"];
+    self.trimmerView.borderWidth = 0;
     [self.view addSubview:self.trimmerView];
-    
+    [self.trimmerView resetSubviews];
 }
 
 - (CGRect)initTrimingPlayerFrame {
@@ -119,14 +142,14 @@
 #pragma mark - ICGVideoTrimmerDelegate
 - (void)trimmerView:(ICGVideoTrimmerView *)trimmerView didChangeLeftPosition:(CGFloat)startTime rightPosition:(CGFloat)endTime {
     
-    if (startTime != self.startTime) {
+    if (startTime != self.player.startTime) {
         [self.player seekVideoToPos:startTime];
     }else{
         [self.player seekVideoToPos:endTime];
     }
-    
-    self.startTime = startTime;
-    self.stopTime = endTime;
+    [self.player setStartTime:startTime];
+    [self.player setEndTime:endTime];
+
 }
 
 @end

@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong, readonly) PHAsset *asset;
 
+@property (nonatomic, assign)     NSInteger videoMaxDuration;
+
 - (instancetype)initWithAsset:(PHAsset *)asset;
 
 @end
